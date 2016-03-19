@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean isGameActive = true;
+
     // Yellow = 0; Red = 1
     private int activePlayer = 0;
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
         System.out.println("tappedCounter: " + tappedCounter);
 
-        if (gameState[tappedCounter] == 2) {
+        if (gameState[tappedCounter] == 2 && isGameActive) {
             gameState[tappedCounter] = getActivePlayer();
 
             counter.setTranslationY(-1000f);
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("User " + getActivePlayer() + " has won! " + gameState[winningPosition[0]]);
 
                     // Someone has won
+                    isGameActive = false;
+
                     String winner = "Red";
                     if (gameState[winningPosition[0]] == 0){
                         winner = "Yellow";
@@ -77,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View view){
+        isGameActive = true;
+
         final LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
         layout.setVisibility(View.INVISIBLE);
 
