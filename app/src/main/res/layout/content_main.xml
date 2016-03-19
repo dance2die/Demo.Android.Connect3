@@ -29,7 +29,7 @@
             android:layout_row="0"
             android:layout_column="0"
             android:src="@drawable/red"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp" />
 
         <ImageView
@@ -39,7 +39,7 @@
             android:layout_row="0"
             android:layout_column="1"
             android:src="@drawable/red"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="10dp" />
 
         <ImageView
@@ -50,7 +50,7 @@
             android:layout_column="2"
             android:src="@drawable/red"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="25dp" />
+            android:layout_marginLeft="35dp" />
 
         <ImageView
             android:layout_width="90sp"
@@ -60,7 +60,7 @@
             android:layout_column="0"
             android:src="@drawable/red"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="90sp"
@@ -70,7 +70,8 @@
             android:layout_column="1"
             android:src="@drawable/red"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="35dp" />
+            android:layout_marginLeft="45dp"
+            android:onClick="dropIn" />
 
         <ImageView
             android:layout_width="90sp"
@@ -80,7 +81,7 @@
             android:layout_column="2"
             android:src="@drawable/red"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="25dp" />
+            android:layout_marginLeft="35dp" />
 
         <ImageView
             android:layout_width="90sp"
@@ -89,7 +90,7 @@
             android:layout_row="2"
             android:layout_column="0"
             android:src="@drawable/red"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp" />
 
         <ImageView
@@ -99,7 +100,7 @@
             android:layout_row="2"
             android:layout_column="1"
             android:src="@drawable/red"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="30dp" />
 
         <ImageView
@@ -109,7 +110,7 @@
             android:layout_row="2"
             android:layout_column="2"
             android:src="@drawable/red"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="35dp"
             android:layout_marginTop="30dp" />
     </GridLayout>
 </RelativeLayout>

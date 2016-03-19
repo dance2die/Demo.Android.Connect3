@@ -8,8 +8,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void dropIn(View view){
+        ImageView counter = (ImageView) view;
+        counter.setTranslationY(-1000f);
+        counter.setImageResource(R.drawable.yellow);
+        counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
