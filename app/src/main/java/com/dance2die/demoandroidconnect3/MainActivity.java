@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
     private int activePlayer = 0;
 
     private int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
+    private int[][] winningPositions = {
+            {0, 1, 2}, {3, 4, 5}, {6, 7, 8},
+            {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
+            {2, 5, 8}, {0, 4, 8}, {2, 4, 6}
+    };
 
     public int getActivePlayer() {
         return activePlayer;
@@ -45,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
             counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
+
+            for (int[] winningPosition : winningPositions){
+                if (gameState[winningPosition[0]] == gameState[winningPosition[1]] &&
+                        gameState[winningPosition[1]] == gameState[winningPosition[2]] &&
+                        gameState[winningPosition[0]] != 2){
+                    System.out.println("User " + getActivePlayer() + " has won! " + gameState[winningPosition[0]]);
+                }
+            }
         }
     }
 
