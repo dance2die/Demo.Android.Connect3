@@ -22,7 +22,8 @@
         android:layout_centerHorizontal="true"
         android:columnCount="3"
         android:rowCount="3"
-        android:background="@drawable/board">
+        android:background="@drawable/board"
+        android:id="@+id/gridLayout">
 
         <ImageView
             android:layout_width="90sp"

@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,6 +73,22 @@ public class MainActivity extends AppCompatActivity {
                     layout.setVisibility(View.VISIBLE);
                 }
             }
+        }
+    }
+
+    public void playAgain(View view){
+        final LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
+        layout.setVisibility(View.INVISIBLE);
+
+        activePlayer = 0;
+        for (int i = 0; i < gameState.length; i++){
+            gameState[i] = 2;
+        }
+
+        GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout);
+        for (int i = 0; i < gridLayout.getChildCount(); i++){
+            ImageView imageView = (ImageView) gridLayout.getChildAt(i);
+            imageView.setImageResource(0);  // 0 resets
         }
     }
 
