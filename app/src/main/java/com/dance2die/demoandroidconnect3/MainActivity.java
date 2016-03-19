@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("User " + getActivePlayer() + " has won! " + gameState[winningPosition[0]]);
 
                     // Someone has won
+                    String winner = "Red";
+                    if (gameState[winningPosition[0]] == 0){
+                        winner = "Yellow";
+                    }
+
+                    TextView winnerMessage = (TextView) findViewById(R.id.winnerMessage);
+                    winnerMessage.setText(winner + " has won!");
+
                     final LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
                     layout.setVisibility(View.VISIBLE);
                 }
