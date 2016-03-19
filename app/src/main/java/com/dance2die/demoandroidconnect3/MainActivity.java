@@ -12,10 +12,29 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Yellow = 0; Red = 1
+    private int activePlayer = 0;
+
+    public int getActivePlayer() {
+        return activePlayer;
+    }
+
+    public void setActivePlayer(int activePlayer) {
+        this.activePlayer = activePlayer;
+    }
+
     public void dropIn(View view){
         ImageView counter = (ImageView) view;
         counter.setTranslationY(-1000f);
-        counter.setImageResource(R.drawable.yellow);
+
+        if (getActivePlayer() == 0){
+            counter.setImageResource(R.drawable.yellow);
+            setActivePlayer(1);
+        } else {
+            counter.setImageResource(R.drawable.red);
+            setActivePlayer(0);
+        }
+
         counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
     }
 
